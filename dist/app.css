@@ -5,9 +5,21 @@
   margin: 0;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: "Heebo", sans-serif;
+}
+
+.weight-normal {
+  font-weight: normal;
 }
 
 ul {
@@ -24,13 +36,23 @@ ul {
   float: left;
 }
 
-button {
-  background: linear-gradient(to right, #ff5db1 0%, #ef017c 100%);
+.pink-button {
+  background: linear-gradient(to right, #b7256e 0%, #f8626b 100%);
   border-radius: 25px;
-  width: 120px;
+  width: 140px;
   height: 40px;
   border: none;
   color: #fff;
+}
+
+.blue-button {
+  background: linear-gradient(to right, #03a6d2 0%, #1f3e83 100%);
+  border-radius: 25px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  margin-left: 20px;
 }
 
 header {
@@ -40,6 +62,12 @@ header {
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 80% 60%;
+  margin-bottom: 60px;
+}
+header .navbar {
+  height: 90px;
+  display: flex;
+  align-items: center;
 }
 header .jumbotron h1 {
   width: 380px;
@@ -48,19 +76,87 @@ header .jumbotron h1 {
   font-size: 45px;
 }
 header .jumbotron span {
-  font-weight: normal;
   margin: 5px 0;
 }
 header .jumbotron p {
   margin-top: 30px;
+  margin-bottom: 55px;
   width: 400px;
-  color: #03a7d3e6;
+  color: #047caa;
 }
 
 .services {
   text-align: center;
 }
+.services > span {
+  color: #f9696b;
+}
+.services h2 {
+  margin: 15px 0;
+}
+.services p {
+  color: #808080;
+}
 .services-list {
   display: flex;
   justify-content: space-between;
+  text-align: center;
+}
+.services-list img {
+  width: 125px;
+  height: 100px;
+  margin-top: 100px;
+}
+.services-list h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.services-list p {
+  color: #808080;
+  width: 200px;
+}
+.services button {
+  margin-top: 90px;
+}
+
+.grow-your-business-section {
+  background-color: #0a1750;
+  height: 700px;
+  color: #fff;
+  margin-top: 70px;
+  background-image: url("../images/men-data.png");
+  background-repeat: no-repeat;
+  background-size: 27%;
+  background-position: 20% 60%;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+.grow-your-business-section .grow-your-business {
+  margin-left: 650px;
+}
+.grow-your-business-section h2 {
+  width: 410px;
+  margin-top: 30px;
+  font-size: 45px;
+}
+.grow-your-business-section p {
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #047caa;
+}
+
+.portfolio-section-content {
+  margin-bottom: 30px;
+}
+.portfolio-section-content > span {
+  color: #f9696b;
+}
+.portfolio-section-content-img {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio-section-content-img img {
+  width: 350px;
 }
