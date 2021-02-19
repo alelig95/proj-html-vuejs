@@ -50,12 +50,12 @@ ul{
 }
 
 .pink-button{
-  background: $gradient-pink-button;
+  background: $gradient-pink;
   @include buttons-style();
 }
 
 .blue-button{
-  background: $gradient-blue-button;
+  background: $gradient-blue;
   @include buttons-style();
   margin-left: 20px;
 }
@@ -168,6 +168,8 @@ header{
 }
 
 .portfolio-section{
+  background-color: grey;
+  height: 500px;
 
   &-content{
     margin-bottom: 30px;
@@ -178,8 +180,31 @@ header{
   &-content-img{
     @include flex-space-between();
     
-    img{
-      width: 350px;
+    &-container{
+      width: 450px;
+      height: 400px;
+      background-color: #fff;
+      border-radius: 20px;
+    
+      img{
+        width: 450px;
+        border-radius: 20px;
+      }
+
+      &-text{
+        @include flex-space-between();
+        height: calc(400px - 328px);
+        padding: 18px 40px;
+
+        span{
+          color: $services-p;
+        }
+      }
     }
+
+    &-container:hover{
+      background: $gradient-pink;
+    }
+
   }
 }
