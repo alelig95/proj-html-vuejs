@@ -45,18 +45,8 @@ ul{
   list-style-type: none;
 }
 
-.clearfix::after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.fl{
-  float: left;
-}
-
 .pink-button{
-  background: $gradient-pink;
+  background: $primary-gradient;
   color: #fff;
   @include buttons-style();
   width: 170px;
@@ -67,7 +57,7 @@ ul{
 
 .white-button{
   background: #fff;
-  color: $span;
+  color: $secondary-color;
   @include buttons-style();
   width: 170px;
   @include flex-space-between();
@@ -76,14 +66,14 @@ ul{
 }
 
 .pink-2-button{
-  background: $gradient-pink;
+  background: $primary-gradient;
   color: #fff;
   @include buttons-style();
   width: 150px;
 }
 
 .blue-button{
-  background: $gradient-blue;
+  background: $secondary-gradient;
   @include buttons-style();
   margin-left: 16px;
   width: 150px;
@@ -91,7 +81,7 @@ ul{
 }
 
 header{
-  background-color: $blue-background;
+  background-color: $primary-background-color;
   height: 680px;
   background-image: url('../images/header.png');
   background-repeat: no-repeat;
@@ -103,6 +93,10 @@ header{
     height: 90px;
     display: flex;
     align-items: center;
+
+    .logo{
+      height: 51px;
+    }
   }
 
   .jumbotron{
@@ -121,7 +115,7 @@ header{
       margin-top: 30px;
       margin-bottom: 55px;
       width: 400px;
-      color: $blue-p;
+      color: $tertiary-color;
     }
   }
 }
@@ -130,15 +124,18 @@ header{
   text-align: center;
 
    > span{
-    color: $span;
+    color: $secondary-color;
+    font-size: 13px;
   }
 
   h2{
-    margin: 15px 0;
+    margin: 5px 0;
+    font-size: 38px;
   }
 
   p{
-    color: $services-p;
+    color: $primary-color;
+    font-size: 13px;
   }
 
   &-list{
@@ -157,7 +154,7 @@ header{
     }
 
     p{
-      color: $services-p;
+      color: $primary-color;
       width: 200px;
     }
   }
@@ -167,7 +164,7 @@ header{
 }
 
 .grow-your-business-section{
-  background-color: #0a1750;
+  background-color: $primary-background-color;
   height: 700px;
   color: #fff;
   margin-top: 70px;
@@ -175,7 +172,6 @@ header{
   background-repeat: no-repeat;
   background-size: 27%;
   background-position: 20% 60%;
-  margin-bottom: 60px;
   display: flex;
   align-items: center;
 
@@ -193,21 +189,21 @@ header{
     width: 400px;
     margin-top: 30px;
     margin-bottom: 40px;
-    color: $blue-p;
+    color: $tertiary-color;
   }
 }
 
 .portfolio-section{
-  background-color: #f1f1f1;
+  background-color: $secondary-background-color;
 
   &-content{
     @include flex-space-between();
     align-items: flex-end;
-    padding: 20px 0 55px 0;
+    padding: 85px 0 60px 0;
   
     &-left{
       > span{
-        color: $span;
+        color: $secondary-color;
         font-size: 13px;
       }
 
@@ -218,7 +214,7 @@ header{
     &-right{
 
       i{
-        color: $span;
+        color: $secondary-color;
         font-size: 32px;
         padding-bottom: 10px;
         margin-left: 10px;
@@ -247,7 +243,7 @@ header{
         padding: 16px 30px;
 
         span{
-          color: $services-p;
+          color: $primary-color;
           font-size: 10px;
         }
 
@@ -258,7 +254,7 @@ header{
     }
 
     &-container:hover{
-      background: $gradient-pink;
+      background: $gradient-hover;
     }
   }
   .icons-container{
@@ -267,11 +263,11 @@ header{
     padding: 43px 0 40px 0;
   
      .fas:first-child{
-      color: $span;
+      color: $secondary-color;
       font-size: 6px;
     }
     .fas{
-      color: $services-p;
+      color: $primary-color;
       font-size: 6px;
       margin-left: 5px;
     }
@@ -283,12 +279,12 @@ header{
   width: 100%;
   height: 500px;
   text-align: center;
-  background-color: $blue-background;
+  background-color: $primary-background-color;
   padding-top: 50px;
   position: relative;
   
   > span{
-    color: $span;
+    color: $secondary-color;
     font-size: 12px;
   }
 
@@ -309,17 +305,27 @@ header{
 .container{
   @include flex-space-between();
   position: absolute;
-  left: 90px;
+  left: 158px;
 }
   
   &-box-white{
     @include our-pricing-box();
-    background-color: white;
+    background-color: #fff;
+    overflow: hidden;
 
+    .transparent-number{
+      font-size: 260px;
+      position: absolute;
+      right: -13px;
+      top: -87px;
+      color: black;
+      opacity: 0.1;
+    }
 
     &-top{
+      position: relative;
+      z-index: 1;
       
-
       h3{
         font-size: 28px;
       }
@@ -331,11 +337,14 @@ header{
     }
 
     &-middle{
-      margin-top: 31px;
+      margin-top: 33px;
       padding-bottom: 50px;
+      position: relative;
+      z-index: 1;
 
       .dollar{
         margin-right: 90px;
+        font-size: 15px;
       }
 
       h2{
@@ -344,14 +353,7 @@ header{
       span{
         font-size: 12px;
       }
-      .transparent-number{
-        font-size: 260px;
-        position: absolute;
-        right: -15px;
-        top: -105px;
-        color: black;
-        opacity: 0.1;
-      }
+      
     }
     
     &-bottom{
@@ -382,9 +384,20 @@ header{
     @include our-pricing-box();
     background: linear-gradient(to bottom, #bf2d6d 0%,#ea566d 100%);
     color: #fff;
+    overflow: hidden;
+
+    .transparent-number{
+      font-size: 260px;
+      position: absolute;
+      right: -15px;
+      top: -105px;
+      color: black;
+      opacity: 0.1;
+    }
 
     &-top{
-      
+      position: relative;
+      z-index: 1;
 
       h3{
         font-size: 28px;
@@ -399,6 +412,8 @@ header{
     &-middle{
       margin-top: 31px;
       padding-bottom: 50px;
+      position: relative;
+      z-index: 1;
 
       .dollar{
         margin-right: 90px;
@@ -410,14 +425,7 @@ header{
       span{
         font-size: 12px;
       }
-      .transparent-number{
-        font-size: 260px;
-        position: absolute;
-        right: -15px;
-        top: -105px;
-        color: black;
-        opacity: 0.1;
-      }
+      
     }
     
     &-bottom{
@@ -447,13 +455,14 @@ header{
 }
 
 .weila-section{
-  background-color: #f1f1f1;
+  background-color: $secondary-background-color;
   height: 700px;
   padding-top: 400px;
   text-align: center;
 
   > span{
-    color: $span;
+    color: $secondary-color;
+    font-size: 13px;
   }
   h2{
     margin: 5px 0;
@@ -461,7 +470,7 @@ header{
   }
 
   > p{
-    color: $services-p;
+    color: $primary-color;
     font-size: 13px;
     width: 37%;
     margin: 0 auto;
@@ -471,22 +480,34 @@ header{
   .container-section{
     @include flex-space-between();
     text-align: left;
-    padding: 0 80px;
-    .top{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 0 0 30px 40px;
+    padding: 0 100px;
+    
+    .left{
+      @include flex-space-between();
+      padding: 0 40px 30px 40px;
       background-image: url("../images/headway-537308-unsplash-1380x703.jpg");
       position: relative;
       background-size: cover;
-      width: 49%;
+      width: 48%;
       height: 330px;
       color: #fff;
+      border-radius: 23px;
+
+      .wa{
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .wi{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+      }
 
       span{
         position: relative;
-        font-size: 12px;
+        font-size: 11px;
       }
       .trattino{
         margin: 0 7px;
@@ -494,34 +515,252 @@ header{
       h3{
         position: relative;
         margin: 10px 0;
-        font-size: 16.5px;
+        font-size: 16px;
       }
       p{
         position: relative;
-        font-size: 12px;
-        width: 57%;
+        font-size: 11px;
+        width: 90%;
       }
     }
     .middle{
       width: 23%;
       height: 330px;
       background: linear-gradient(to bottom right, #020230 0%,#173270 100%);
+      color: #fff;
+      padding: 30px 60px 30px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 23px;
+
+      span{
+        font-size: 11px;
+      }
+      .trattino{
+        margin: 0 7px;
+      }
+      h3{
+        margin: 25px 0;
+        font-size: 16px;
+      }
+      p{
+        font-size: 11px;
+      }
+      button{
+        margin-top: 40px;
+      }
+
     }
-    .bottom{
+    .right{
       width: 23%;
       height: 330px;
-      background: linear-gradient(to bottom right, #020230 0%,#173270 100%);;
+      background: $tertiary-gradient;
+      color: #fff;
+      padding: 30px 60px 30px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 23px;
+
+      span{
+        font-size: 11px;
+      }
+      .trattino{
+        margin: 0 7px;
+      }
+      h3{
+        margin: 25px 0;
+        font-size: 16px;
+      }
+      p{
+        font-size: 11px;
+      }
+      button{
+        margin-top: 40px;
+      }
     }
   }
 }
 
+.testimonial-section{
+  text-align: center;
+  padding-top: 310px;
+  position: relative;
 
+  > span{
+    color: $secondary-color;
+    font-size: 13px;
+  }
+  h2{
+    margin: 5px 0 20px 0;
+    font-size: 38px;
+  }
+
+  > p{
+    color: $primary-color;
+    font-size: 13px;
+    width: 37%;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  }
+
+  .quotes-container{
+    text-align: left;
+    @include flex-space-between();
+
+    &-box{
+      width: 30%;
+      position: relative;
+      text-align: center;
+
+      .quotation-mark{
+        position: absolute;
+        font-size: 170px;
+        top: 30px;
+        left: 38%;
+        opacity: 0.1;
+      }
+
+      img{
+        height: 60px;
+        border-radius: 100%;
+        border: 3px solid fuchsia;
+      }
+      
+      .icons{
+        padding: 26px 0;
+        position: relative;
+        z-index: 2;
+        font-size: 12px;
+
+        .fas{
+          color: fuchsia;
+        }
+        .far{
+          color: fuchsia;
+        }
+      }
+
+      p{
+        font-size: 13px;
+        padding-bottom: 20px;
+      }
+
+      .credits{
+
+        span{
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        p{
+          margin-top: 7px;
+        }
+      }
+      
+    }
+  }
+  .partners-img{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 140px;
+
+    img{
+      height: 52px;
+    }
+    img:nth-child(2){
+      height: 30px;
+      margin-top: 12px;
+    }
+  }
+  .subscribe-box{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    height: 220px;
+    text-align: left;
+    padding: 0 35px;
+    @include flex-space-between();
+    align-items: center;
+    background: $primary-gradient;
+    border-radius: 26px;
+    bottom: -310px;
+
+    &-left{
+
+      h2{
+        font-size: 36px;
+        margin-bottom: 2px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+    &-right{
+      display:flex;
+      flex-direction:row;
+      border-radius: 23px;
+      background-color: #fff;
+      width: 430px;
+
+      input{
+        height: 50px;
+        width: 320px;
+        border-radius: 29px;
+        padding-left: 35px;
+        border: none;
+      }
+      button{
+        width: 110px;
+        margin: 5px 7px 5px 0;
+      }
+    }
+  }
+}
+
+footer{
+  background-color: $primary-background-color;
+  height: 600px;
+  margin-top: 205px;
+  
+  .footer-content{
+    padding-top: 200px;
+    @include flex-space-between();
+    width: 1050px;
+
+    h3{
+      color: #fff;
+      font-size: 15px;
+    }
+
+    &-column-a{
+      width: 280px;
+
+      p{
+        color: $footer-text-color;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.white-button-2{
+  width: 125px;
+  height: 40px;
+  border-radius: 23px;
+  border: none;
+  background-color: #fff;
+}
 
 .opacity{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 23px;
 }
+
+/* #b6246e #f7626a */
