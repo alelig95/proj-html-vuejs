@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -14,22 +14,23 @@
   <title>Document</title>
 </head>
 <body>
-  
+
   <div id="app">
-    
+
     <header>
       <div class="container">
-        <div class="navbar"> 
+        <div class="navbar">
           <div class="navbar-left">
-            <img class="logo" src="images/white-logo-2.png" alt="">
+            <img class="logo" :src="logo" alt="">
           </div>
           <div class="navbar-right">
             <ul>
-              <li></li>
+              <li v-for="element in navbarLinks"> <a href="">{{element}}</a> </li>
+              <li> <button class="blue-button"> Sign In</button></li>
             </ul>
 
           </div>
-          
+
         </div>
         <div class="jumbotron">
           <h1>Businnes Planning
@@ -47,8 +48,8 @@
       <div class="services">
           <span>Our Services</span>
           <h2>What <span class="weight-normal">We Do</span></h2>
-          <p class="services-description">When, while the lovely valley teems with vapour around meand the</p>
-        
+          <p>When, while the lovely valley teems with vapour around meand the</p>
+
         <div class="services-list">
           <div class="data-analysis">
             <img src="images/Group-247.png" alt="">
@@ -80,7 +81,7 @@
         <div class="grow-your-business">
           <span>Start Your Project</span>
           <h2>Grow Your Business <span class="weight-normal">With Our Strategy</span></h2>
-          <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface, 
+          <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface,
             of the impenetrables foliage of my trees, and but a few stray gleams steal into the inner sanctuary.
           </p>
           <button class="pink-2-button">Try It Now</button>
@@ -136,11 +137,10 @@
       </div>
     </div>
 
-   <!--  Prova -->
   <div class="our-pricing-section">
     <span>Price List</span>
     <h2>Our <span class="weight-normal">Pricing</span></h2>
-    <p class="services-description">When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface.</p>
+    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface.</p>
     <div class="container">
       <div class="our-pricing-section-box-white">
         <h2 class="transparent-number">40</h2>
@@ -162,7 +162,7 @@
             <li>  <span>Exceptional</span> Design </li>
           </ul>
 
-          <div class="w">
+          <div class="button-container">
             <button class="pink-button">
               <span>Order Now</span>
               <i class="fas fa-long-arrow-alt-right"></i>
@@ -191,7 +191,7 @@
             <li>  <span>Exceptional</span> Design </li>
           </ul>
 
-          <div class="w">
+          <div class="button-container">
             <button class="white-button">
               <span>Order Now</span>
               <i class="fas fa-long-arrow-alt-right"></i>
@@ -220,7 +220,7 @@
             <li>  <span>Exceptional</span> Design </li>
           </ul>
 
-          <div class="w">
+          <div class="button-container">
             <button class="pink-button">
               <span>Order Now</span>
               <i class="fas fa-long-arrow-alt-right"></i>
@@ -231,25 +231,25 @@
     </div>
   </div>
 
-  <div class="weila-section">
+  <div class="blog-section">
     <span>Blog</span>
     <h2>Latest <span class="weight-normal">Post</span></h2>
-    <p class="services-description">When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface.</p>
+    <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface.</p>
 
     <div class="container-section">
       <div class="left">
         <div class="opacity"></div>
-        
-        <div class="wa">
+
+        <div class="inner-left">
           <div>
-            <div><span>April 21, 2019</span> <span class="trattino"> - </span> <span>by Paul</span></div>
-            
+            <div><span>April 21, 2019</span> <span class="dash"> - </span> <span>by Paul</span></div>
+
             <h3>Amazon gets CCI nod to acquire 49% stake in</h3>
             <p>When, while the lovely valley teems with vapour around me, the meridian sun s...</p>
           </div>
         </div>
 
-        <div class="wi">
+        <div class="inner-right">
           <div>
             <button class="white-button-2">Read More</button>
           </div>
@@ -257,8 +257,8 @@
       </div>
       <div class="middle">
         <div>
-          <div><span>April 21, 2019</span> <span class="trattino"> - </span> <span>by Paul</span></div>
-          
+          <div><span>April 21, 2019</span> <span class="dash"> - </span> <span>by Paul</span></div>
+
           <h3>Clearing Corporations get SEBI nod to invest in overnight funds</h3>
           <p>When, while the lovely valley teems with vapour around me, the meridian sun s...</p>
         </div>
@@ -269,8 +269,8 @@
 
       <div class="right">
         <div>
-          <div><span>April 21, 2019</span> <span class="trattino"> - </span> <span>by Paul</span></div>
-          
+          <div><span>April 21, 2019</span> <span class="dash"> - </span> <span>by Paul</span></div>
+
           <h3>Shabnam Dhillion, wife of RSSB chief Gurinder Dhillon, passes away in London</h3>
           <p>When, while the lovely valley teems with vapour around me, the meridian sun s...</p>
         </div>
@@ -279,7 +279,7 @@
         </div>
       </div>
 
-      
+
     </div>
 
   </div>
@@ -288,7 +288,7 @@
     <div class="testimonial-section">
       <span>Testimonial</span>
       <h2>What <span class="weight-normal">People Say</span></h2>
-      <p class="services-description">When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface.</p>
+      <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface.</p>
       <div class="quotes-container">
         <div class="quotes-container-box">
           <div class="quotation-mark">"</div>
@@ -346,7 +346,7 @@
             <p>Marketing Management</p>
           </div>
         </div>
-      
+
       </div>
 
       <div class="partners-img">
@@ -374,26 +374,45 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-content-column-a">
-          <img class="logo" src="images/white-logo-2.png" alt="">
+          <img class="logo" :src="logo" alt="">
           <p>When, while lovely valley teems vapour aroundmeand meridian sun strikes the upper impenetrable</p>
         </div>
         <div class="footer-content-column-b">
           <h3>Quick Links</h3>
           <ul>
-            <li></li>
+            <li v-for="element in footerQuickLinks"> <a href="">{{element}}</a> </li>
           </ul>
         </div>
         <div class="footer-content-column-c">
           <h3>Resources</h3>
           <ul>
-            <li></li>
+            <li v-for="element in footerResources"> <a href="">{{element}}</a> </li>
           </ul>
         </div>
         <div class="footer-content-column-d">
           <h3>Contact Us</h3>
           <ul>
-            <li></li>
+            <li v-for="element in footerContactUs"> 
+              <p> <span>Address:</span> {{element.address}}</p>
+              <p> <span>Phone:</span> {{element.phone}}</p>
+              <p> <span>Email:</span> {{element.email}}</p>
+            </li>
           </ul>
+        </div>
+      </div>
+      
+    </div>
+    <hr>
+    <div class="container">
+      <div class="credits">
+        <div class="credits-left">
+          <p>© 2020 Phlox. All Rights Reserved.</p>
+        </div>
+        <div class="credits-right">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
         </div>
       </div>
     </div>

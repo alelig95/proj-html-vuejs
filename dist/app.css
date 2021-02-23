@@ -14,6 +14,10 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1, h2, h3 {
   font-family: "Heebo", sans-serif;
 }
@@ -37,6 +41,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 0 23px;
+  cursor: pointer;
+}
+
+.pink-button:hover {
+  background: linear-gradient(to right, #03a6d2 0%, #1f3e83 100%);
 }
 
 .white-button {
@@ -50,6 +59,26 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 0 23px;
+  cursor: pointer;
+}
+
+.white-button-2 {
+  width: 125px;
+  height: 40px;
+  border-radius: 23px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.opacity {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 23px;
 }
 
 .pink-2-button {
@@ -59,6 +88,11 @@ ul {
   height: 40px;
   border: none;
   width: 150px;
+  cursor: pointer;
+}
+
+.pink-2-button:hover {
+  background: linear-gradient(to right, #03a6d2 0%, #1f3e83 100%);
 }
 
 .blue-button {
@@ -69,30 +103,53 @@ ul {
   margin-left: 16px;
   width: 150px;
   color: #fff;
+  cursor: pointer;
 }
 
+.blue-button:hover {
+  background: linear-gradient(to right, #b7256e 0%, #f8626b 100%);
+}
+
+/* /common rules */
 header {
   background-color: #0a1750;
-  height: 680px;
+  height: 760px;
   background-image: url("../images/header.png");
   background-repeat: no-repeat;
-  background-size: 40%;
-  background-position: 80% 60%;
+  background-size: 39%;
+  background-position: 80% 45%;
   margin-bottom: 60px;
 }
 header .navbar {
   height: 90px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-header .navbar .logo {
+header .navbar-left .logo {
   height: 51px;
 }
-header .jumbotron h1 {
-  width: 380px;
-  margin-top: 100px;
+header .navbar-right li {
+  padding-left: 25px;
+  display: inline-block;
+  font-size: 15px;
+}
+header .navbar-right li a {
   color: #fff;
-  font-size: 45px;
+}
+header .navbar-right li button {
+  width: 90px;
+  height: 35px;
+  margin-left: 10px;
+}
+header .navbar-right li a {
+  color: #fff;
+}
+header .jumbotron h1 {
+  width: 460px;
+  margin-top: 140px;
+  color: #fff;
+  font-size: 50px;
 }
 header .jumbotron span {
   margin: 5px 0;
@@ -100,8 +157,9 @@ header .jumbotron span {
 header .jumbotron p {
   margin-top: 30px;
   margin-bottom: 55px;
-  width: 400px;
+  width: 340px;
   color: #f4f4f4;
+  font-size: 12px;
 }
 
 .services {
@@ -156,16 +214,20 @@ header .jumbotron p {
 .grow-your-business-section .grow-your-business {
   margin-left: 650px;
 }
+.grow-your-business-section .grow-your-business > span {
+  font-size: 13px;
+}
 .grow-your-business-section h2 {
-  width: 410px;
-  margin-top: 30px;
-  font-size: 45px;
+  width: 450px;
+  margin-top: 20px;
+  font-size: 50px;
 }
 .grow-your-business-section p {
-  width: 400px;
+  width: 420px;
   margin-top: 30px;
   margin-bottom: 40px;
   color: #f4f4f4;
+  font-size: 13px;
 }
 
 .portfolio-section {
@@ -212,7 +274,7 @@ header .jumbotron p {
   padding: 16px 30px;
 }
 .portfolio-section-content-img-container-text span {
-  color: #888;
+  color: #aaa;
   font-size: 10px;
 }
 .portfolio-section-content-img-container-text h3 {
@@ -236,7 +298,6 @@ header .jumbotron p {
   margin-left: 5px;
 }
 
-/* Prova */
 .our-pricing-section {
   width: 100%;
   height: 500px;
@@ -318,14 +379,14 @@ header .jumbotron p {
 .our-pricing-section-box-white-bottom span {
   font-weight: bold;
 }
-.our-pricing-section-box-white-bottom .w {
+.our-pricing-section-box-white-bottom .button-container {
   display: flex;
   justify-content: center;
 }
-.our-pricing-section-box-white-bottom .w button {
+.our-pricing-section-box-white-bottom .button-container button {
   margin: 30px 0 16px 0;
 }
-.our-pricing-section-box-white-bottom .w button i {
+.our-pricing-section-box-white-bottom .button-container button i {
   font-size: 16px;
 }
 .our-pricing-section-box-pink {
@@ -380,45 +441,45 @@ header .jumbotron p {
 .our-pricing-section-box-pink-bottom span {
   font-weight: bold;
 }
-.our-pricing-section-box-pink-bottom .w {
+.our-pricing-section-box-pink-bottom .button-container {
   display: flex;
   justify-content: center;
 }
-.our-pricing-section-box-pink-bottom .w button {
+.our-pricing-section-box-pink-bottom .button-container button {
   margin: 30px 0 16px 0;
 }
-.our-pricing-section-box-pink-bottom .w button i {
+.our-pricing-section-box-pink-bottom .button-container button i {
   font-size: 16px;
 }
 
-.weila-section {
+.blog-section {
   background-color: #f1f1f1;
   height: 700px;
   padding-top: 400px;
   text-align: center;
 }
-.weila-section > span {
+.blog-section > span {
   color: #f9636b;
   font-size: 13px;
 }
-.weila-section h2 {
+.blog-section h2 {
   margin: 5px 0;
   font-size: 38px;
 }
-.weila-section > p {
+.blog-section > p {
   color: #888;
   font-size: 13px;
   width: 37%;
   margin: 0 auto;
   margin-bottom: 75px;
 }
-.weila-section .container-section {
+.blog-section .container-section {
   display: flex;
   justify-content: space-between;
   text-align: left;
   padding: 0 100px;
 }
-.weila-section .container-section .left {
+.blog-section .container-section .left {
   display: flex;
   justify-content: space-between;
   padding: 0 40px 30px 40px;
@@ -430,33 +491,33 @@ header .jumbotron p {
   color: #fff;
   border-radius: 23px;
 }
-.weila-section .container-section .left .wa {
+.blog-section .container-section .left .inner-left {
   display: flex;
   align-items: flex-end;
 }
-.weila-section .container-section .left .wi {
+.blog-section .container-section .left .inner-right {
   position: relative;
   display: flex;
   align-items: flex-end;
 }
-.weila-section .container-section .left span {
+.blog-section .container-section .left span {
   position: relative;
   font-size: 11px;
 }
-.weila-section .container-section .left .trattino {
+.blog-section .container-section .left .dash {
   margin: 0 7px;
 }
-.weila-section .container-section .left h3 {
+.blog-section .container-section .left h3 {
   position: relative;
   margin: 10px 0;
   font-size: 16px;
 }
-.weila-section .container-section .left p {
+.blog-section .container-section .left p {
   position: relative;
   font-size: 11px;
   width: 90%;
 }
-.weila-section .container-section .middle {
+.blog-section .container-section .middle {
   width: 23%;
   height: 330px;
   background: linear-gradient(to bottom right, #020230 0%, #173270 100%);
@@ -467,23 +528,23 @@ header .jumbotron p {
   justify-content: flex-end;
   border-radius: 23px;
 }
-.weila-section .container-section .middle span {
+.blog-section .container-section .middle span {
   font-size: 11px;
 }
-.weila-section .container-section .middle .trattino {
+.blog-section .container-section .middle .dash {
   margin: 0 7px;
 }
-.weila-section .container-section .middle h3 {
+.blog-section .container-section .middle h3 {
   margin: 25px 0;
   font-size: 16px;
 }
-.weila-section .container-section .middle p {
+.blog-section .container-section .middle p {
   font-size: 11px;
 }
-.weila-section .container-section .middle button {
+.blog-section .container-section .middle button {
   margin-top: 40px;
 }
-.weila-section .container-section .right {
+.blog-section .container-section .right {
   width: 23%;
   height: 330px;
   background: linear-gradient(to bottom right, #020230 0%, #173270 100%);
@@ -494,20 +555,20 @@ header .jumbotron p {
   justify-content: flex-end;
   border-radius: 23px;
 }
-.weila-section .container-section .right span {
+.blog-section .container-section .right span {
   font-size: 11px;
 }
-.weila-section .container-section .right .trattino {
+.blog-section .container-section .right .dash {
   margin: 0 7px;
 }
-.weila-section .container-section .right h3 {
+.blog-section .container-section .right h3 {
   margin: 25px 0;
   font-size: 16px;
 }
-.weila-section .container-section .right p {
+.blog-section .container-section .right p {
   font-size: 11px;
 }
-.weila-section .container-section .right button {
+.blog-section .container-section .right button {
   margin-top: 40px;
 }
 
@@ -551,7 +612,7 @@ header .jumbotron p {
 .testimonial-section .quotes-container-box img {
   height: 60px;
   border-radius: 100%;
-  border: 3px solid fuchsia;
+  border: 3px solid #b6246e;
 }
 .testimonial-section .quotes-container-box .icons {
   padding: 26px 0;
@@ -560,10 +621,10 @@ header .jumbotron p {
   font-size: 12px;
 }
 .testimonial-section .quotes-container-box .icons .fas {
-  color: fuchsia;
+  color: #b6246e;
 }
 .testimonial-section .quotes-container-box .icons .far {
-  color: fuchsia;
+  color: #b6246e;
 }
 .testimonial-section .quotes-container-box p {
   font-size: 13px;
@@ -630,43 +691,72 @@ header .jumbotron p {
 
 footer {
   background-color: #0a1750;
-  height: 600px;
+  height: 540px;
   margin-top: 205px;
 }
 footer .footer-content {
   padding-top: 200px;
   display: flex;
   justify-content: space-between;
-  width: 1050px;
+}
+footer .footer-content a {
+  color: #69717b;
 }
 footer .footer-content h3 {
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
+  padding-bottom: 15px;
 }
 footer .footer-content-column-a {
   width: 280px;
 }
 footer .footer-content-column-a p {
   color: #aaa;
-  margin-top: 30px;
+  margin-top: 35px;
+  font-size: 13px;
 }
-
-.white-button-2 {
-  width: 125px;
-  height: 40px;
-  border-radius: 23px;
+footer .footer-content-column-b {
+  padding-top: 15px;
+}
+footer .footer-content-column-b li {
+  padding-bottom: 13px;
+}
+footer .footer-content-column-c {
+  padding-top: 15px;
+}
+footer .footer-content-column-c li {
+  padding-bottom: 13px;
+}
+footer .footer-content-column-d {
+  padding-top: 15px;
+  width: 300px;
+  color: #69717b;
+}
+footer .footer-content-column-d span {
+  color: #fff;
+}
+footer .footer-content-column-d p {
+  margin-bottom: 5px;
+}
+footer .footer-content-column-d p:first-child {
+  margin: 5px 0 20px 0;
+}
+footer hr {
+  margin-top: 40px;
   border: none;
-  background-color: #fff;
+  height: 0.5px;
+  background-color: #69717b;
+  margin-bottom: 20px;
 }
-
-.opacity {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 23px;
+footer .credits {
+  display: flex;
+  justify-content: space-between;
 }
-
-/* #b6246e #f7626a */
+footer .credits-left {
+  color: #69717b;
+}
+footer .credits-right i {
+  padding-left: 30px;
+  font-size: 14px;
+  color: #fff;
+}

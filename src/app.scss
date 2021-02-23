@@ -33,6 +33,10 @@ body{
   margin: 0 auto;
 }
 
+a{
+  text-decoration: none;
+}
+
 h1, h2, h3{
   font-family: $font-title;
 }
@@ -53,6 +57,11 @@ ul{
   @include flex-space-between();
   align-items: center;
   padding: 0 23px;
+  cursor: pointer;
+}
+
+.pink-button:hover {
+  background: $secondary-gradient;
 }
 
 .white-button{
@@ -63,6 +72,26 @@ ul{
   @include flex-space-between();
   align-items: center;
   padding: 0 23px;
+  cursor: pointer;
+}
+
+.white-button-2{
+  width: 125px;
+  height: 40px;
+  border-radius: 23px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.opacity{
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 23px;
 }
 
 .pink-2-button{
@@ -70,6 +99,11 @@ ul{
   color: #fff;
   @include buttons-style();
   width: 150px;
+  cursor: pointer;
+}
+
+.pink-2-button:hover {
+  background: $secondary-gradient;
 }
 
 .blue-button{
@@ -78,34 +112,63 @@ ul{
   margin-left: 16px;
   width: 150px;
   color: #fff;
+  cursor: pointer;
 }
 
+.blue-button:hover{
+  background: $primary-gradient;
+}
+/* /common rules */
 header{
   background-color: $primary-background-color;
-  height: 680px;
+  height: 760px;
   background-image: url('../images/header.png');
   background-repeat: no-repeat;
-  background-size: 40%;
-  background-position: 80% 60%;
+  background-size: 39%;
+  background-position: 80% 45%;
   margin-bottom: 60px;
 
   .navbar{
     height: 90px;
-    display: flex;
+    @include flex-space-between();
     align-items: center;
+    
+    &-left{
 
-    .logo{
-      height: 51px;
+      .logo{
+        height: 51px;
+      }
+    }
+    &-right{
+
+      li{
+        padding-left: 25px;
+        display: inline-block;
+        font-size: 15px;
+        
+        a{
+          color: #fff;
+        }
+        button{
+          width: 90px;
+          height: 35px;
+          margin-left: 10px;
+        }
+        
+        a{
+          color: #fff;
+        } 
+      }
     }
   }
 
   .jumbotron{
 
     h1{
-      width: 380px;
-      margin-top: 100px;
+      width: 460px;
+      margin-top: 140px;
       color: #fff;
-      font-size: 45px;
+      font-size: 50px;
     }
     span{
       margin: 5px 0;
@@ -114,8 +177,9 @@ header{
     p{
       margin-top: 30px;
       margin-bottom: 55px;
-      width: 400px;
+      width: 340px;
       color: $tertiary-color;
+      font-size: 12px;
     }
   }
 }
@@ -177,19 +241,24 @@ header{
 
   .grow-your-business{
     margin-left: 650px;
+
+    > span{
+      font-size: 13px;
+    }
   }
 
   h2{
-    width: 410px;
-    margin-top: 30px;
-    font-size: 45px;
+    width: 450px;
+    margin-top: 20px;
+    font-size: 50px;
   }
 
   p{
-    width: 400px;
+    width: 420px;
     margin-top: 30px;
     margin-bottom: 40px;
     color: $tertiary-color;
+    font-size: 13px;
   }
 }
 
@@ -243,7 +312,7 @@ header{
         padding: 16px 30px;
 
         span{
-          color: $primary-color;
+          color: $color-4;
           font-size: 10px;
         }
 
@@ -274,7 +343,6 @@ header{
   }
 }
 
-/* Prova */
 .our-pricing-section{
   width: 100%;
   height: 500px;
@@ -365,7 +433,7 @@ header{
       span{
         font-weight: bold;
       }
-      .w{
+      .button-container{
         display: flex;
         justify-content: center;
         button{
@@ -438,7 +506,7 @@ header{
         font-weight: bold;
       }
       
-      .w{
+      .button-container{
         display: flex;
         justify-content: center;
         button{
@@ -451,10 +519,9 @@ header{
       }
     }
   }
-  
 }
 
-.weila-section{
+.blog-section{
   background-color: $secondary-background-color;
   height: 700px;
   padding-top: 400px;
@@ -493,23 +560,22 @@ header{
       color: #fff;
       border-radius: 23px;
 
-      .wa{
+      .inner-left{
         display: flex;
         align-items: flex-end;
       }
 
-      .wi{
+      .inner-right{
         position: relative;
         display: flex;
         align-items: flex-end;
-
       }
 
       span{
         position: relative;
         font-size: 11px;
       }
-      .trattino{
+      .dash{
         margin: 0 7px;
       }
       h3{
@@ -537,7 +603,7 @@ header{
       span{
         font-size: 11px;
       }
-      .trattino{
+      .dash{
         margin: 0 7px;
       }
       h3{
@@ -566,7 +632,7 @@ header{
       span{
         font-size: 11px;
       }
-      .trattino{
+      .dash{
         margin: 0 7px;
       }
       h3{
@@ -625,7 +691,7 @@ header{
       img{
         height: 60px;
         border-radius: 100%;
-        border: 3px solid fuchsia;
+        border: 3px solid $color-6;
       }
       
       .icons{
@@ -635,10 +701,10 @@ header{
         font-size: 12px;
 
         .fas{
-          color: fuchsia;
+          color: $color-6;
         }
         .far{
-          color: fuchsia;
+          color: $color-6;
         }
       }
 
@@ -721,46 +787,86 @@ header{
 
 footer{
   background-color: $primary-background-color;
-  height: 600px;
+  height: 540px;
   margin-top: 205px;
   
   .footer-content{
     padding-top: 200px;
     @include flex-space-between();
-    width: 1050px;
+
+    a{
+      color: $color-5;
+    }
 
     h3{
       color: #fff;
-      font-size: 15px;
+      font-size: 16px;
+      padding-bottom: 15px;
     }
 
     &-column-a{
       width: 280px;
 
       p{
-        color: $footer-text-color;
-        margin-top: 30px;
+        color: $color-4;
+        margin-top: 35px;
+        font-size: 13px;
+      }
+    }
+    &-column-b{
+      padding-top: 15px;
+
+      li{
+        padding-bottom: 13px;
+      }
+    }
+    &-column-c{
+      padding-top: 15px;
+
+      li{
+        padding-bottom: 13px;
+      }
+    }
+    &-column-d{
+      padding-top: 15px;
+      width: 300px;
+      color: $color-5;
+
+      span{
+        color: #fff;
+      }
+
+      p{
+        margin-bottom: 5px;
+      }
+
+      p:first-child{
+        margin: 5px 0 20px 0;
+      }
+
+    }
+  }
+  
+  hr {
+    margin-top: 40px;
+    border: none;
+    height: 0.5px;
+    background-color: $color-5;
+    margin-bottom: 20px;
+  }
+  .credits{
+    @include flex-space-between();
+
+    &-left{
+      color: $color-5;
+    }
+    &-right{
+
+      i{
+        padding-left: 30px;
+        font-size: 14px;
+        color: #fff;
       }
     }
   }
 }
-
-.white-button-2{
-  width: 125px;
-  height: 40px;
-  border-radius: 23px;
-  border: none;
-  background-color: #fff;
-}
-
-.opacity{
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 23px;
-}
-
-/* #b6246e #f7626a */
