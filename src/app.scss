@@ -200,30 +200,65 @@ header{
   p{
     color: $primary-color;
     font-size: 13px;
+    margin-bottom: 100px;
   }
 
   &-list{
-    @include flex-space-between();
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
 
+    &-box{
+      width: 300px;
+      height: 265px;
+      position: relative;
+      background-color: #fff;
+    }
+    &-box:hover{
+      background-color: $primary-background-color;
+      border-radius: 26px;
+      
+      p, h3{
+        color: #fff;
+      }
+      .img-c{
+        box-shadow: 0 0 10px #888888;
+      }
+    }
+
+    .img-c{
+      height: 180px;
+      width: 180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      background: #fff;
+      top: -100px;
+      left: 56px;
+      border-radius: 26px;
+
+    }
     img{
       width: 125px;
       height: 100px;
-      margin-top: 100px;
     }
 
     h3{
-      margin-top: 30px;
-      margin-bottom: 20px;
+      margin-top: 95px;
+      margin-bottom: 10px;
     }
 
     p{
       color: $primary-color;
       width: 200px;
+      margin: 0 auto;
     }
   }
   button{
-    margin-top: 90px;
+    margin-top: 80px;
   }
 }
 
@@ -386,7 +421,7 @@ header{
       position: absolute;
       right: -13px;
       top: -87px;
-      color: black;
+      color: #000;
       opacity: 0.1;
     }
 
@@ -406,7 +441,7 @@ header{
 
     &-middle{
       margin-top: 33px;
-      padding-bottom: 50px;
+      padding-bottom: 40px;
       position: relative;
       z-index: 1;
 
@@ -416,7 +451,8 @@ header{
       }
 
       h2{
-        font-size: 60px;
+        font-size: 80px;
+        font-family: $font-our-pricing;
       }
       span{
         font-size: 12px;
@@ -457,9 +493,9 @@ header{
     .transparent-number{
       font-size: 260px;
       position: absolute;
-      right: -15px;
-      top: -105px;
-      color: black;
+      right: -13px;
+      top: -87px;
+      color: #fff;
       opacity: 0.1;
     }
 
@@ -479,7 +515,7 @@ header{
 
     &-middle{
       margin-top: 31px;
-      padding-bottom: 50px;
+      padding-bottom: 40px;
       position: relative;
       z-index: 1;
 
@@ -488,7 +524,8 @@ header{
       }
 
       h2{
-        font-size: 60px;
+        font-size: 80px;
+        font-family: $font-our-pricing;
       }
       span{
         font-size: 12px;
@@ -684,7 +721,7 @@ header{
         position: absolute;
         font-size: 170px;
         top: 30px;
-        left: 38%;
+        left: 39%;
         opacity: 0.1;
       }
 

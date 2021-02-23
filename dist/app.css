@@ -176,27 +176,58 @@ header .jumbotron p {
 .services p {
   color: #888;
   font-size: 13px;
+  margin-bottom: 100px;
 }
 .services-list {
+  padding-top: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
+}
+.services-list-box {
+  width: 300px;
+  height: 265px;
+  position: relative;
+  background-color: #fff;
+}
+.services-list-box:hover {
+  background-color: #0a1750;
+  border-radius: 26px;
+}
+.services-list-box:hover p, .services-list-box:hover h3 {
+  color: #fff;
+}
+.services-list-box:hover .img-c {
+  box-shadow: 0 0 10px #888888;
+}
+.services-list .img-c {
+  height: 180px;
+  width: 180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: #fff;
+  top: -100px;
+  left: 56px;
+  border-radius: 26px;
 }
 .services-list img {
   width: 125px;
   height: 100px;
-  margin-top: 100px;
 }
 .services-list h3 {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 95px;
+  margin-bottom: 10px;
 }
 .services-list p {
   color: #888;
   width: 200px;
+  margin: 0 auto;
 }
 .services button {
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 .grow-your-business-section {
@@ -342,7 +373,7 @@ header .jumbotron p {
   position: absolute;
   right: -13px;
   top: -87px;
-  color: black;
+  color: #000;
   opacity: 0.1;
 }
 .our-pricing-section-box-white-top {
@@ -358,7 +389,7 @@ header .jumbotron p {
 }
 .our-pricing-section-box-white-middle {
   margin-top: 33px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   position: relative;
   z-index: 1;
 }
@@ -367,7 +398,8 @@ header .jumbotron p {
   font-size: 15px;
 }
 .our-pricing-section-box-white-middle h2 {
-  font-size: 60px;
+  font-size: 80px;
+  font-family: "Montserrat", sans-serif;
 }
 .our-pricing-section-box-white-middle span {
   font-size: 12px;
@@ -403,9 +435,9 @@ header .jumbotron p {
 .our-pricing-section-box-pink .transparent-number {
   font-size: 260px;
   position: absolute;
-  right: -15px;
-  top: -105px;
-  color: black;
+  right: -13px;
+  top: -87px;
+  color: #fff;
   opacity: 0.1;
 }
 .our-pricing-section-box-pink-top {
@@ -421,7 +453,7 @@ header .jumbotron p {
 }
 .our-pricing-section-box-pink-middle {
   margin-top: 31px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   position: relative;
   z-index: 1;
 }
@@ -429,7 +461,8 @@ header .jumbotron p {
   margin-right: 90px;
 }
 .our-pricing-section-box-pink-middle h2 {
-  font-size: 60px;
+  font-size: 80px;
+  font-family: "Montserrat", sans-serif;
 }
 .our-pricing-section-box-pink-middle span {
   font-size: 12px;
@@ -606,7 +639,7 @@ header .jumbotron p {
   position: absolute;
   font-size: 170px;
   top: 30px;
-  left: 38%;
+  left: 39%;
   opacity: 0.1;
 }
 .testimonial-section .quotes-container-box img {
